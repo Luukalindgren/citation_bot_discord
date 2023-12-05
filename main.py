@@ -26,6 +26,18 @@ async def on_message(message):
 
     if message.content.startswith('!Quote'):
         summary = get_random_summary()
-        await message.channel.send("## " + f"*{summary['random_quote'].strip()}*" + "\n```" + f"\nKirja: {summary['title']}" + f"\nKirjailija: {summary['author']}" + f"\nKirjan arvosana: ({summary['rating']}/5)" + "\n```" + "\n**[Kirjan tiivistelmä](https://blog-nextjs-three-nu.vercel.app/books)**")
+
+        formatted_message = (
+
+            f"## *{summary['random_quote'].strip()}*\n"
+            "```\n"
+            f"Kirja: {summary['title']}\n"
+            f"Kirjailija: {summary['author']}\n"
+            f"Kirjan arvosana: ({summary['rating']}/5)\n"
+            "```\n"
+            "**[Kirjan tiivistelmä](https://blog-nextjs-three-nu.vercel.app/books)**"
+        )
+
+        await message.channel.send(formatted_message)
 
 client.run(token)
