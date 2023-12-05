@@ -24,4 +24,10 @@ print("Randomly picked ID: ", random_id)
 print("Title: ", response.data[0]['title'])
 print("Author: ", response.data[0]['author'])
 print("Rating: ", response.data[0]['rating'], "/ 5")
-# print("Summary: ", response.data[0]['summary'])
+# Separate quotes from the whole summary, and split into list of quotes
+quotes = response.data[0]['summary'].split('Lausahduksia:')[1].strip().split(
+    '\n')
+# Remove empty strings, via list comprehension
+quotes = [i for i in quotes if i]
+print("Quotes: ", quotes)
+print("Random quote: ", random.choice(quotes))
