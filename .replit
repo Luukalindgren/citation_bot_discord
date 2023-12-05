@@ -1,0 +1,16 @@
+modules = ["python-3.10:v18-20230807-322e88b"]
+
+hidden = [".pythonlibs"]
+run = "python3 main.py"
+
+onBoot = "pip3 install -r requirements.txt"
+
+[nix]
+channel = "stable-23_05"
+
+[unitTest]
+language = "python3"
+
+[deployment]
+run = ["sh", "-c", "run = \"python main.py\""]
+deploymentTarget = "cloudrun"
