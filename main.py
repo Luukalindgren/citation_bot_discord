@@ -2,6 +2,7 @@
 import discord
 import os
 from dotenv import load_dotenv
+from fetch_data import get_random_summary
 
 load_dotenv()
 
@@ -23,7 +24,8 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('$hello'):
-        await message.channel.send('Hello!')
+    if message.content.startswith('!Quote'):
+        summary = get_random_summary()
+        await message.channel.send("## " + f"*{summary['random_quote'].strip()}*" + "\n```" + f"\nKirja: {summary['title']}" + f"\nKirjailija: {summary['author']}" + f"\nKirjan arvosana: ({summary['rating']}/5)" + "\n```" + "\n**[Kirjan tiivistelmä](https://blog-nextjs-three-nu.vercel.app/books)**")
 
 client.run(token)
