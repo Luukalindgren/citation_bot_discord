@@ -1,4 +1,5 @@
 
+import sys
 import discord
 import os
 from discord.ext import tasks
@@ -50,7 +51,7 @@ async def on_message(message):
         await message.channel.send(formatted_message)
 
 
-@tasks.loop(hours=24)
+@tasks.loop()
 async def daily_quote():
     await client.wait_until_ready()
     channel = client.get_channel(1181191090817216565)
@@ -58,6 +59,8 @@ async def daily_quote():
     summary = get_random_summary()
     formatted_message = format_quote(summary)
     await channel.send(formatted_message)
+
+    sys.exit()
 
 
 client.run(token)
