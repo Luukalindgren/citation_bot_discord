@@ -10,7 +10,7 @@
 
 ### Invite the bot to your server:
 
-- [Click here](https://discord.com/api/oauth2/authorize?client_id=859729732837019904&permissions=0&scope=bot)
+- [Click here](https://discord.com/api/oauth2/authorize?client_id=1181190256884731985&permissions=2147665984&scope=bot+applications.commands)
 
 ### API used:
 
