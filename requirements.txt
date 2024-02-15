@@ -42,7 +42,7 @@ multiprocess==0.70.15
 numpy==1.26.0
 packaging==23.1
 pathos==0.3.1
-Pillow==10.0.1
+Pillow==10.2.0
 platformdirs==3.10.0
 postgrest==0.13.0
 pox==0.3.3
