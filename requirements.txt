@@ -18,7 +18,7 @@ discord.py==2.3.2
 distlib==0.3.7
 dnspython==2.4.1
 filelock==3.12.4
-fonttools==4.42.1
+fonttools==4.43.0
 frozenlist==1.4.0
 google-api-core==2.11.1
 google-auth==2.23.0
