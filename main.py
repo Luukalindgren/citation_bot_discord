@@ -13,7 +13,7 @@ intents.message_content = True
 
 client = discord.Client(intents=intents)
 
-token = os.getenv('BOT_TOKEN')
+token = os.environ['BOT_TOKEN']
 
 
 def format_quote(summary):

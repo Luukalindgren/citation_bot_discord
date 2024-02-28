@@ -6,15 +6,19 @@ from supabase import create_client
 supabase = None
 
 # Create Supabase client, if not already created, reuse spares resources
+
+
 def create_supabase_client():
     global supabase
     if not supabase:
-        db_url: str = os.getenv('SUPABASE_URL')
-        db_key: str = os.getenv('SUPABASE_KEY')
+        db_url: str = os.environ['SUPABASE_URL']
+        db_key: str = os.environ['SUPABASE_KEY']
         supabase = create_client(db_url, db_key)
     return supabase
 
 # Get random summary from Supabase
+
+
 def get_random_summary():
 
     supabase = create_supabase_client()
