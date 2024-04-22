@@ -6,9 +6,9 @@
 
 ## Serverless design, works with Github Actions and Cron
 
-- Currently setup to post everyday at 06:00.
+- Currently setup to post everyday at 08:00.
 
-## Invite the bot to your server:
+## Invite the bot to your server: (NOT WORKING)
 
 - [Click here](https://discord.com/api/oauth2/authorize?client_id=1181190256884731985&permissions=2147665984&scope=bot+applications.commands) (NOT YET WORKING!)
 
